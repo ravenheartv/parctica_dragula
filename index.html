@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista silly</title>
+    <link rel="stylesheet" href="dragula.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <section id="contenedor">
+        <div>
+            <h1>TO DO</h1>
+            <ul id="to-do">
+                <li>DO SUM, BRUH</li> 
+                <li>dibujar kuromis</li>
+                <li>Go 4 kebab</li>
+            </ul>
+
+        </div>
+
+        <div>
+            <h1>IN PROGRESS</h1>
+            <ul id="wip">
+                <li>Darle u par de besicos al niño</li>
+                <li>make sum pizzas</li>
+                <li>salir corriendo de los monstruos de la noche</li>
+            </ul>
+
+        </div>
+
+        <div>
+            <h1>END</h1>
+            <ul id="end">
+                <li>Ritual satanico</li>
+                <li>echar a los okupas k hay en mi casa</li>
+                <li>dormir 1 hora diaria</li>
+            </ul>
+        </div>
+        
+    </section>
+
+   <script src="\dragula.js"></script>
+   <script>
+    dragula([
+      document.querySelector('#to-do'), 
+      document.querySelector('#wip'),
+      document.querySelector('#end')
+    ])
+    .on('drag', function (el) {
+    console.log("yastas moviendo cosas ehh?? pareces mi vecina del 3")
+    console.log(el)
+  }).on('drop', function (el) {
+    
+    console.log("ya las dejao no??")
+});
+   </script>
+</body>
+</html>
